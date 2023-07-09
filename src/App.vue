@@ -6,11 +6,11 @@
       </div>
       <nav class="navbar">
         <ul class="navlist">
-          <li v-if="!isPaginaAdmin"><router-link to="/pagina1">Menu</router-link></li>
+          <li v-if="!isPaginaAdmin"><router-link to="/pagina1">Menú</router-link></li>
           <li v-if="!isPagina2 && !isPagina3 && !isPaginaAdmin"><router-link to="/pagina2">Iniciar sesión</router-link></li>
           <li v-if="isPagina2 && !isPagina3 && !isPaginaAdmin"><router-link to="/pagina2/pagina3">Iniciar</router-link></li>
           <li v-if="!isPaginaAdmin"><router-link to="/iniciaradmin">Administrador</router-link></li>
-          <li v-if="isPaginaAdmin"><router-link to="/pagina1">Menú</router-link></li> <!-- Botón Administrador solo en la página de "Iniciar Admin" -->
+          <li v-if="isPagina3"><router-link to="/transaccionaruser">Transaccionar</router-link></li>
         </ul>
       </nav>
     </header>
@@ -101,4 +101,3 @@ export default {
   padding: 20px;
 }
 </style>
-
